@@ -1,0 +1,31 @@
+{
+  "name": "vector-math",
+  "version": "1.0.0",
+  "description": "Module for doing simple 2D & 3D vector operations.",
+  "main": "./lib/vectors.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/williepot/vector-math.git"
+  },
+  "keywords": [
+    "vector",
+    "2D",
+    "3D",
+    "math",
+    "dot",
+    "cross",
+    "product",
+    "unit",
+    "add",
+    "subtract"
+  ],
+  "author": "Willie Potgieter <willie658@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/williepot/vector-math/issues"
+  },
+  "homepage": "https://github.com/williepot/vector-math#readme"
+}
