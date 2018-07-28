@@ -1,6 +1,6 @@
 {
   "name": "vector-math",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Module for doing simple 2D & 3D vector operations.",
   "main": "./lib/vectors.js",
   "scripts": {
