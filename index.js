@@ -1,18 +1,19 @@
-import { Matrix } from "./lib/matrix.js";
+import { Vector } from "./lib/vector.js";
+import {
+  createVectorObj,
+  calcModulus,
+  unitVector,
+  addVector,
+  subVector,
+  dotProduct,
+} from "./lib/legacy.js";
 
-const myMatrix = new Matrix(
-  [1, 2, 3],
-  [4, 5, 6, 7],
-  [8],
-  [9, 10, 11, 12],
-  [45]
-);
-
-console.log("---------------");
-console.log("Original matrix");
-myMatrix.print();
-
-const transposedMatrix = myMatrix.T;
-console.log("---------------");
-console.log("Transposed matrix");
-transposedMatrix.print();
+export {
+  Vector,
+  createVectorObj,
+  calcModulus,
+  unitVector,
+  addVector,
+  subVector,
+  dotProduct,
+};
