@@ -5,24 +5,27 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --verbose"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/williepotgieter/vector-math.git"
   },
   "keywords": [
-    "Vector",
-    "math",
-    "2D",
-    "Vectors",
-    "3D",
-    "Vectors"
+    "vectors",
+    "math"
   ],
   "author": "Willie Potgieter",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/williepotgieter/vector-math/issues"
   },
-  "homepage": "https://github.com/williepotgieter/vector-math#readme"
+  "homepage": "https://github.com/williepotgieter/vector-math#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "@types/jest": "^29.5.10",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
 }
