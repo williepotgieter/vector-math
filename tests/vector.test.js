@@ -94,6 +94,7 @@ describe("Vector class", () => {
         difference: new Vector(-6, -1, -8),
         vA_dot_vB: 20,
         vA_cross_vB: new Vector(-1, 2, -1),
+        vA_cross_vB_add_vC_cross_vB_dot_vA: 12,
       },
       {
         vA: new Vector(),
@@ -103,23 +104,40 @@ describe("Vector class", () => {
         difference: new Vector(-7, -3, 5),
         vA_dot_vB: 0,
         vA_cross_vB: new Vector(),
+        vA_cross_vB_add_vC_cross_vB_dot_vA: 0,
       },
     ];
 
-    cases.forEach(({ vA, vB, vC, sum, difference, vA_dot_vB, vA_cross_vB }) => {
-      const sV = vA.Add(vB, vC);
-      const dV = vA.Subtract(vB, vC);
+    cases.forEach(
+      ({
+        vA,
+        vB,
+        vC,
+        sum,
+        difference,
+        vA_dot_vB,
+        vA_cross_vB,
+        vA_cross_vB_add_vC_cross_vB_dot_vA,
+      }) => {
+        const sV = vA.Add(vB, vC);
+        const dV = vA.Subtract(vB, vC);
 
-      expect(sV).toBeInstanceOf(Vector);
-      expect(sV.value).toStrictEqual(sum.value);
+        expect(sV).toBeInstanceOf(Vector);
+        expect(sV.value).toStrictEqual(sum.value);
 
-      expect(dV).toBeInstanceOf(Vector);
-      expect(dV.value).toStrictEqual(difference.value);
+        expect(dV).toBeInstanceOf(Vector);
+        expect(dV.value).toStrictEqual(difference.value);
 
-      expect(vA.Dot(vB)).toStrictEqual(vA_dot_vB);
+        expect(vA.Dot(vB)).toStrictEqual(vA_dot_vB);
 
-      expect(vA_cross_vB).toBeInstanceOf(Vector);
-      expect(vA.Cross(vB).value).toStrictEqual(vA_cross_vB.value);
-    });
+        expect(vA_cross_vB).toBeInstanceOf(Vector);
+        expect(vA.Cross(vB).value).toStrictEqual(vA_cross_vB.value);
+
+        // Chained operation
+        expect(vA.Cross(vB).Add(vC.Cross(vB)).Dot(vA)).toStrictEqual(
+          vA_cross_vB_add_vC_cross_vB_dot_vA
+        );
+      }
+    );
   });
 });

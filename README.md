@@ -171,7 +171,7 @@ The following vector operations will be added in future releases
 - [x] Subtraction
 - [x] Dot product
 - [x] Cross product
-- [ ] Triple product
+- [x] Scalar Triple product
 - [ ] Angle between vectors
 - [ ] Scalar projection
 - [ ] Vector projection

@@ -1,4 +1,5 @@
 import { Vector } from "./lib/vector.js";
+import { scalarTripleProduct } from "./lib/operations.js";
 import {
   createVectorObj,
   calcModulus,
@@ -10,6 +11,7 @@ import {
 
 export {
   Vector,
+  scalarTripleProduct,
   createVectorObj,
   calcModulus,
   unitVector,
