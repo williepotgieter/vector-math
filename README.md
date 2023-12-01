@@ -165,13 +165,13 @@ $\mathbf{b}=\mathbf{0}$
 
 The following vector operations will be added in future releases
 
-- [x] Modulus
-- [x] Unit vector
-- [x] Addition
-- [x] Subtraction
-- [x] Dot product
-- [x] Cross product
-- [x] Scalar Triple product
+- [x] ~~Modulus~~
+- [x] ~~Unit vector~~
+- [x] ~~Addition~~
+- [x] ~~Subtraction~~
+- [x] ~~Dot product~~
+- [x] ~~Cross product~~
+- [x] ~~Scalar Triple product~~
 - [ ] Angle between vectors
 - [ ] Scalar projection
 - [ ] Vector projection
