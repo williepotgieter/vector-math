@@ -32,9 +32,9 @@ The packace provides the following vector properties and operations:
 #### Creating vectors
 
 ```javascript
-import { Vector } from "vector-path";
+import { Vector } from "vector-math";
 // OR
-// const { Vector } = require("vector-path")
+// const { Vector } = require("vector-math")
 
 // Create vectors
 const u = new Vector(1, 2, -3);
