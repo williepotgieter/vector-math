@@ -4,8 +4,10 @@
   "description": "Zero dependency 2D & 3D vector mathematical operations",
   "type": "module",
   "main": "index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "generateTypes": "tsc"
   },
   "repository": {
     "type": "git",

@@ -1,7 +1,12 @@
 {
+    "include": ["./index.js"],
     "compilerOptions": {
         "allowJs": true,
         "checkJs": true,
-        "strict": true
+        "strict": true,
+        "declaration": true,
+        "emitDeclarationOnly": true,
+        "outDir": "dist",
+        "declarationMap": true
     }
 }
