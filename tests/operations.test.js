@@ -1,5 +1,5 @@
-import { Vector } from "../lib/vector.js";
-import { scalarTripleProduct } from "../lib/operations.js";
+const { Vector } = require("../lib/vector.js");
+const { scalarTripleProduct } = require("../lib/operations.js");
 
 describe("Vector standard operations", () => {
   it("scalar triple product", () => {

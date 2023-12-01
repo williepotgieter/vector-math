@@ -1,4 +1,4 @@
-import {
+const {
   createVectorObj,
   calcModulus,
   unitVector,
@@ -6,7 +6,7 @@ import {
   subVector,
   dotProduct,
   crossProduct,
-} from "../lib/legacy.js";
+} = require("../lib/legacy.js");
 
 describe("Legacy functions", () => {
   it("vector object", () => {

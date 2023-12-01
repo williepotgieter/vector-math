@@ -1,4 +1,4 @@
-import { Vector } from "../lib/vector.js";
+const { Vector } = require("../lib/vector.js");
 
 describe("Vector class", () => {
   it("vector instance", () => {

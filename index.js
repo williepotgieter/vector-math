@@ -1,15 +1,15 @@
-import { Vector } from "./lib/vector.js";
-import { scalarTripleProduct } from "./lib/operations.js";
-import {
+const { Vector } = require("./lib/vector.js");
+const { scalarTripleProduct } = require("./lib/operations.js");
+const {
   createVectorObj,
   calcModulus,
   unitVector,
   addVector,
   subVector,
   dotProduct,
-} from "./lib/legacy.js";
+} = require("./lib/legacy.js");
 
-export {
+module.exports = {
   Vector,
   scalarTripleProduct,
   createVectorObj,
