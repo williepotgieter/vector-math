@@ -33,6 +33,8 @@ The packace provides the following vector properties and operations:
 
 ```javascript
 import { Vector } from "vector-path";
+// OR
+// const { Vector } = require("vector-path")
 
 // Create vectors
 const u = new Vector(1, 2, -3);
