@@ -90,18 +90,18 @@ describe("Vector class", () => {
         vA: new Vector(1, 2, 3),
         vB: new Vector(2, 3, 4),
         vC: new Vector(5, 0, 7),
-        sum: { i: 8, j: 5, k: 14 },
-        difference: { i: -6, j: -1, k: -8 },
-        vA_dot_vB: new Vector(2, 6, 12),
+        sum: new Vector(8, 5, 14),
+        difference: new Vector(-6, -1, -8),
+        vA_dot_vB: 20,
         vA_cross_vB: new Vector(-1, 2, -1),
       },
       {
         vA: new Vector(),
         vB: new Vector(2, 3, 4),
         vC: new Vector(5, 0, -9),
-        sum: { i: 7, j: 3, k: -5 },
-        difference: { i: -7, j: -3, k: 5 },
-        vA_dot_vB: new Vector(),
+        sum: new Vector(7, 3, -5),
+        difference: new Vector(-7, -3, 5),
+        vA_dot_vB: 0,
         vA_cross_vB: new Vector(),
       },
     ];
@@ -111,13 +111,12 @@ describe("Vector class", () => {
       const dV = vA.Subtract(vB, vC);
 
       expect(sV).toBeInstanceOf(Vector);
-      expect(sV.value).toStrictEqual(sum);
+      expect(sV.value).toStrictEqual(sum.value);
 
       expect(dV).toBeInstanceOf(Vector);
-      expect(dV.value).toStrictEqual(difference);
+      expect(dV.value).toStrictEqual(difference.value);
 
-      expect(vA_dot_vB).toBeInstanceOf(Vector);
-      expect(vA.Dot(vB).value).toStrictEqual(vA_dot_vB.value);
+      expect(vA.Dot(vB)).toStrictEqual(vA_dot_vB);
 
       expect(vA_cross_vB).toBeInstanceOf(Vector);
       expect(vA.Cross(vB).value).toStrictEqual(vA_cross_vB.value);

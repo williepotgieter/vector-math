@@ -56,7 +56,7 @@ describe("Legacy functions", () => {
         vC: { i: 5, j: 0, k: 7 },
         sum: { i: 8, j: 5, k: 14 },
         difference: { i: -1, j: -1, k: -1 },
-        vA_dot_vB: { i: 2, j: 6, k: 12 },
+        vA_dot_vB: 20,
         vA_cross_vB: { i: -1, j: 2, k: -1 },
       },
       {
@@ -65,7 +65,7 @@ describe("Legacy functions", () => {
         vC: { i: 5, j: 0, k: -9 },
         sum: { i: 7, j: 3, k: -5 },
         difference: { i: -2, j: -3, k: -4 },
-        vA_dot_vB: { i: 0, j: 0, k: 0 },
+        vA_dot_vB: 0,
         vA_cross_vB: { i: 0, j: 0, k: 0 },
       },
     ];
@@ -73,6 +73,7 @@ describe("Legacy functions", () => {
     cases.forEach(({ vA, vB, vC, sum, difference, vA_dot_vB, vA_cross_vB }) => {
       expect(addVector([vA, vB, vC])).toStrictEqual(sum);
       expect(subVector(vA, vB)).toStrictEqual(difference);
+      // dotproduct fails
       expect(dotProduct(vA, vB)).toStrictEqual(vA_dot_vB);
       expect(crossProduct(vA, vB)).toStrictEqual(vA_cross_vB);
     });
